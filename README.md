@@ -1,10 +1,3 @@
-# scaffold_eth2_tutorial application
-
-![alt text](https://github.com/RosarioB/scaffold_eth2_tutorial/blob/main/github_images/scaffold_eth2_tutorial.gif?raw=true)
-
-This is the source code of this [Medium article](https://medium.com/@borgesiros/step-by-step-guide-how-to-build-your-first-dapp-with-scaffold-eth-2-cc74927fd498) and of this [Youtube video](https://www.youtube.com/watch?v=354L6OZVwjA&t=2152s)
-
-
 # 🏗 Scaffold-ETH 2
 
 <h4 align="center">
@@ -14,7 +7,7 @@ This is the source code of this [Medium article](https://medium.com/@borgesiros/
 
 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
+⚙️ Built using NextJS, RainbowKit, Foundry/Hardhat, Wagmi, Viem, and Typescript.
 
 - ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
 - 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
@@ -36,12 +29,16 @@ Before you begin, you need to install the following tools:
 
 To get started with Scaffold-ETH 2, follow the steps below:
 
-1. Install dependencies if it was skipped in CLI:
+1. Install the latest version of Scaffold-ETH 2
 
 ```
-cd my-dapp-example
-yarn install
+npx create-eth@latest
 ```
+
+This command will install all the necessary packages and dependencies, so it might take a while.
+
+> [!NOTE]
+> You can also initialize your project with one of our extensions to add specific features or starter-kits. Learn more in our [extensions documentation](https://docs.scaffoldeth.io/extensions/).
 
 2. Run a local network in the first terminal:
 
@@ -49,7 +46,7 @@ yarn install
 yarn chain
 ```
 
-This command starts a local Ethereum network using Hardhat. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `packages/hardhat/hardhat.config.ts`.
+This command starts a local Ethereum network that runs on your local machine and can be used for testing and development. Learn how to [customize your network configuration](https://docs.scaffoldeth.io/quick-start/environment#1-initialize-a-local-blockchain).
 
 3. On a second terminal, deploy the test contract:
 
@@ -57,7 +54,7 @@ This command starts a local Ethereum network using Hardhat. The network runs on 
 yarn deploy
 ```
 
-This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
+This command deploys a test smart contract to the local network. You can find more information about how to customize your contract and deployment script in our [documentation](https://docs.scaffoldeth.io/quick-start/environment#2-deploy-your-smart-contract).
 
 4. On a third terminal, start your NextJS app:
 
@@ -67,16 +64,20 @@ yarn start
 
 Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
 
-Run smart contract test with `yarn hardhat:test`
+**What's next**:
 
-- Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
-- Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
-- Edit your deployment scripts in `packages/hardhat/deploy`
+Visit the [What's next section of our docs](https://docs.scaffoldeth.io/quick-start/environment#whats-next) to learn how to:
 
+- Edit your smart contracts
+- Edit your deployment scripts
+- Customize your frontend
+- Edit the app config
+- Writing and running tests
+- [Setting up external services and API keys](https://docs.scaffoldeth.io/deploying/deploy-smart-contracts#configuration-of-third-party-services-for-production-grade-apps)
 
 ## Documentation
 
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
+Visit our [docs](https://docs.scaffoldeth.io) to learn all the technical details and guides of Scaffold-ETH 2.
 
 To know more about its features, check out our [website](https://scaffoldeth.io).
 
