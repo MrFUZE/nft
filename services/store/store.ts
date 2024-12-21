@@ -1,0 +1,3 @@
+// ... existing imports ...
+
+targetNetwork: scaffoldConfig.targetNetwork, // Убираем [0], так как теперь это одна сеть 
